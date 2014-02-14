@@ -1,4 +1,4 @@
-android.apps.main
-=================
+android.service
+===============
 
-The main Sneer app, with the service implementing the sneer api and the main UI.
+Service that will implement the API and be embedded into the main Sneer app.
