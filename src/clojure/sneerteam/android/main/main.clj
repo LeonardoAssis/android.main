@@ -1,4 +1,4 @@
-(ns android.apps.main.main
+(ns sneerteam.android.main.main
   (:use [neko.activity :only [defactivity set-content-view!]]
         [neko.threading :only [on-ui]]
         [neko.ui :only [make-ui]]
@@ -24,9 +24,9 @@
   (.unbindService context connection))
 
 (defn click [_ activity ]
-  (start-service! activity "android.apps.main.SneerService" #(toast (str %))))
+  (start-service! activity "sneerteam.android.main.SneerService" #(toast (str %))))
 
-(defactivity android.apps.main.MainActivity
+(defactivity sneerteam.android.main.MainActivity
   :def a
   :on-create
   (fn [this bundle]
@@ -53,7 +53,7 @@
     (CustomBinder. service)))
 
 
-(gen-class :name android.apps.main.SneerService
+(gen-class :name sneerteam.android.main.SneerService
            :extends android.app.Service
            :main false)
 

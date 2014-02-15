@@ -1,6 +1,6 @@
 (defproject Sneer/Sneer "0.0.1-SNAPSHOT"
   :description "Main Sneer App"
-  :url "http://github.com/sneerteam/android.apps.main"
+  :url "http://github.com/sneerteam/android.main"
   :license {:name "LGPLv3"
             :url "https://www.gnu.org/licenses/lgpl.html"}
   :min-lein-version "2.0.0"

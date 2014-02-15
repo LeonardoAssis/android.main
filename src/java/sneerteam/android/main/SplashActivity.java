@@ -1,4 +1,4 @@
-package android.apps.main;
+package sneerteam.android.main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import clojure.lang.Symbol;
 import clojure.lang.Var;
 import clojure.lang.RT;
 
-import android.apps.main.R;
+import sneerteam.android.main.R;
 
 public class SplashActivity extends Activity {
 
@@ -46,7 +46,7 @@ public class SplashActivity extends Activity {
     }
 
     public void proceed() {
-        startActivity(new Intent("android.apps.main.MAIN"));
+        startActivity(new Intent("sneerteam.android.main.MAIN"));
         finish();
     }
 
@@ -62,7 +62,7 @@ public class SplashActivity extends Activity {
                     INIT.invoke(SplashActivity.this.getApplication());
 
                     try {
-                        Class.forName("android.apps.main.MainActivity");
+                        Class.forName("sneerteam.android.main.MainActivity");
                     } catch (ClassNotFoundException e) {
                         Log.e(TAG, "Failed loading MainActivity", e);
                     }
