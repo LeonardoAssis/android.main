@@ -1,4 +1,4 @@
-android.service
-===============
+android.main
+============
 
-Service that will implement the API and be embedded into the main Sneer app.
+Welcome to Sovereign Computing. This is the main Sneer app with the service that implements the Sneer API.
