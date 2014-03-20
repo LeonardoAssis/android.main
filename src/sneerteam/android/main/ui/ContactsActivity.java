@@ -9,12 +9,13 @@ import sneerteam.android.main.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Contacts extends Activity {
+public class ContactsActivity extends Activity {
 
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,12 +56,13 @@ public class Contacts extends Activity {
 	}
 	
 	private void showActionProfile() {
-		Intent intent = new Intent(Contacts.this, ProfileActivity.class);
+		Intent intent = new Intent(ContactsActivity.this, ProfileActivity.class);
 		startActivity (intent);
 	}
 	
     private List<Contact> contacts() {
     	List<Contact> contacts = new ArrayList<Contact>();
+    	contacts.add(new Contact(PreferenceManager.getDefaultSharedPreferences(this).getString("nick_name", null)));
     	contacts.add(new Contact("Altz"));
         contacts.add(new Contact("Rafa"));
         contacts.add(new Contact("Jao"));

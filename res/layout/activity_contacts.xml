@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background"
-    tools:context=".Contacts" >
+    tools:context=".ContactsActivity" >
 
     <ListView 
 		android:id="@+id/listView" 
