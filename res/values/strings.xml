@@ -4,7 +4,7 @@
     <string name="app_name">Sneer</string>
     <string name="action_profile">Profile</string>
     <string name="dummy_text">dummy</string>
-    <string name="action_send_seal">Send my seal</string>
+    <string name="action_send_pk">Send my public key</string>
     <string name="action_add_friend">Add friend</string>
 
 </resources>

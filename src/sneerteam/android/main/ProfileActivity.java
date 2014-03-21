@@ -19,7 +19,7 @@ public class ProfileActivity extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.pref_general);
 		bindPreferenceSummaryToValue(findPreference("first_name"));
 		bindPreferenceSummaryToValue(findPreference("last_name"));
-		bindPreferenceSummaryToValue(findPreference("nick_name"));
+		bindPreferenceSummaryToValue(findPreference("nickname"));
 	}
 
 	private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
