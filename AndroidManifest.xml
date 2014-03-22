@@ -24,6 +24,10 @@
         <activity
             android:name="sneerteam.android.main.ui.ContactPickerActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+        		<action android:name="sneerteam.intent.action.PICK_CONTACT"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+        	</intent-filter>	
         </activity>
         <activity
             android:name="sneerteam.android.main.ui.ProfileActivity"
