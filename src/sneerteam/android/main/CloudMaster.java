@@ -4,9 +4,9 @@ import sneerteam.api.ICloud;
 
 public interface CloudMaster {
 
-	void close();
+	/** Returns a new ICloud. All previous IClouds with the same callerId are closed. */
+	ICloud.Stub freshCloudFor(Object callerId);
 
-	/** Returns a new ICloud. All previous IClouds with the same id are closed. */
-	ICloud.Stub freshCloudFor(Object id);
+	void close();
 
 }
