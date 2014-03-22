@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sneerteam.android.main.Contact;
-import sneerteam.android.main.ProfileActivity;
 import sneerteam.android.main.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,12 +14,12 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class ContactsActivity extends Activity {
+public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_contacts);
+		setContentView(R.layout.activity_main);
 
 		ListView listView = (ListView) findViewById(R.id.listView);
 		// listView.setOnItemClickListener(new OnItemClickListener() { @Override
@@ -32,8 +31,7 @@ public class ContactsActivity extends Activity {
 		// startActivity (intent);
 		// }});
 
-		ContactsAdapter adapter = new ContactsAdapter(this,
-				R.layout.list_item_contact, contacts());
+		ContactsAdapter adapter = new ContactsAdapter(this, R.layout.list_item_contact, contacts());
 		listView.setAdapter(adapter);
 
 	}
@@ -62,7 +60,7 @@ public class ContactsActivity extends Activity {
 	}
 
 	private void showActionProfile() {
-		Intent intent = new Intent(ContactsActivity.this, ProfileActivity.class);
+		Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
 		startActivity(intent);
 	}
 

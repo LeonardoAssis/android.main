@@ -1,5 +1,6 @@
-package sneerteam.android.main;
+package sneerteam.android.main.ui;
 
+import sneerteam.android.main.R;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
