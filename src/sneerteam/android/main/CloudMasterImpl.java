@@ -56,6 +56,8 @@ public class CloudMasterImpl implements CloudMaster {
 				messagesBeingSent.decrementAndGet();
 			}
 		});
+		
+		publishKey();
 	}
 	
 	@Override
@@ -78,4 +80,10 @@ public class CloudMasterImpl implements CloudMaster {
 		return fresh;
 	}
 
+	private void publishKey() {
+		ICloudImpl cloud = (ICloudImpl)freshCloudFor("Key Publisher");
+		cloud.pubPath(Uri.parse("/keys/public/" + publicKey));
+		//cloud.close(); //TODO Future: Make sure pending pubs are sent before close.
+	}
 }
+
