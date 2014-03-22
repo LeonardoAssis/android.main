@@ -54,7 +54,8 @@ public class CloudMasterImpl implements CloudMaster {
 			@Override
 			public void sendCompleted(byte[] message) {
 				messagesBeingSent.decrementAndGet();
-			}});
+			}
+		});
 	}
 	
 	@Override
