@@ -41,7 +41,7 @@ public class CloudServiceOld extends Service {
 
 		@Override
 		public void pubPath(Uri path) throws RemoteException {
-			int implentMe;
+			// TODO Auto-generated method stub
 		}
 	};	
 	
@@ -49,7 +49,7 @@ public class CloudServiceOld extends Service {
 		@Override
 		public void receivedPacket(ByteBuffer packet) throws IOException {
 			Bundle bundle = Encoder.bundle(stringFrom(packet));
-			broadcast(Uri.parse("content://public/chat"), bundle);
+			broadcast(Uri.parse("/public/chat"), bundle);
 		}
 		
 		String stringFrom(ByteBuffer packet) throws UnsupportedEncodingException {
