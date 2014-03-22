@@ -10,7 +10,7 @@ public class CloudService extends Service {
 	
 	private CloudMaster master;
 
-	@Override public void onCreate()  { super.onCreate(); master = new CloudMasterImpl(); };
+	@Override public void onCreate()  { super.onCreate(); master = new CloudMasterImpl(getApplicationContext()); };
 	@Override public void onDestroy() {	if (master != null) master.close();	super.onDestroy(); }
 	
 	@Override
