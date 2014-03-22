@@ -46,6 +46,15 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_add_friend:
+			
+			// Bundle bundleNick = new Bundle();
+			// bundleNick.putString(":value", friendNickname);
+			// cloud.pub("/contacts/" + friendPublicKeyHex + "/nickname", bundleNick);
+			//
+			// Bundle bundleName = new Bundle();
+			// bundleName.putString(":value", friendName);
+			// cloud.pub("/contacts/" + friendPublicKeyHex + "/name", bundleName);
+			
 			Toast.makeText(this, "Show add friend view!", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.action_profile:
