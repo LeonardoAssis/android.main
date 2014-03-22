@@ -18,16 +18,15 @@
         android:maxLines="1"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="@string/pref_title_second_name" />
+        android:title="@string/pref_title_last_name" />
     
 	<EditTextPreference
         android:capitalize="words"
         android:defaultValue=""
-        android:inputType="textCapWords"
-        android:key="nick_name"
+        android:key="nickname"
         android:maxLines="1"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="@string/pref_title_nick_name" />
+        android:title="@string/pref_title_nickname" />
     
 </PreferenceScreen>

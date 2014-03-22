@@ -10,8 +10,8 @@
         android:orderInCategory="101"
         android:title="@string/action_profile" />
     
-    <item android:id="@+id/action_send_seal" 
-        android:title="@string/action_send_seal" 
+    <item android:id="@+id/action_send_pk" 
+        android:title="@string/action_send_pk" 
         android:orderInCategory="102" />
     
 </menu>
