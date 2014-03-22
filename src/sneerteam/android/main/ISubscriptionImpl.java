@@ -24,7 +24,7 @@ class ISubscriptionImpl extends ISubscription.Stub {
 	}
 
 	@Override
-	public void dispose() throws RemoteException {
+	public void dispose() {
 		doDispose();
 	}
 

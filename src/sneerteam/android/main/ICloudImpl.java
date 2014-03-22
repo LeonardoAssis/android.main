@@ -13,7 +13,6 @@ import sneerteam.api.ISubscription;
 import sneerteam.network.ToServer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.RemoteException;
 
 class ICloudImpl extends ICloud.Stub {
 
@@ -48,20 +47,20 @@ class ICloudImpl extends ICloud.Stub {
 	}
 
 	@Override
-	public void pubPath(Uri path) throws RemoteException {
+	public void pubPath(Uri path) {
 		byte[] encoded = null; // Rod: encodar de modo a saber que é um pub de um path sem value. N precisa encodar o client pq o network já diz de quem é o pacote.
 		send(encoded);
 	}
 
 	@Override
-	public void pubValue(Uri path, Bundle value) throws RemoteException {
+	public void pubValue(Uri path, Bundle value) {
 		if (value == null) throw new IllegalArgumentException("pub value was null.");
 		byte[] encoded = null; // Rod: encodar de modo a saber que é um pub de um path com value. N precisa encodar o client pq o network já diz de quem é o pacote.
 		send(encoded);
 	}
 
 	@Override
-	public ISubscription sub(Uri path, ISubscriber subscriber) throws RemoteException {
+	public ISubscription sub(Uri path, ISubscriber subscriber) {
 		if (isClosed) throw new IllegalStateException("sub was called on closed cloud");
 		
 		long id = nextSubscriptionId.incrementAndGet();
